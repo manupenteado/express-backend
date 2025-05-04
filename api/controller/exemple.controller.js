@@ -1,7 +1,8 @@
+import { runSecuredAction } from '../services/exemple.service.js';
 
-const securedExemple = async (req, res) =>{
-    console.log("Something that needs authentication was run here:");
-    return res.status(200).json({message: 'This is a secured endpoint'})
-}
+const securedExemple = async (req, res) => {
+    const result = runSecuredAction();
+    res.status(200).json(result);
+};
 
-export default {securedExemple};
+export default { securedExemple };
