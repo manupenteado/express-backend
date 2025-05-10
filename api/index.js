@@ -3,6 +3,8 @@ import dotenv from 'dotenv';
 import db from './database/configdb.js';
 import userRoute from './routes/user.route.js';
 import exempleRoute from './routes/exemple.route.js';
+import habitRoutes from './routes/habits.route.js'; // Caminho correto
+
 
 
 dotenv.config();
@@ -15,6 +17,8 @@ app.use(express.json());
 
 app.use("/users", userRoute);
 app.use("/secureExempleRoute", exempleRoute);
+app.use('/habits', habitRoutes);
+
 
 app.get('/', (req, res) => {
     res.send({message: 'Hello everyone!'});
