@@ -1,9 +1,9 @@
-import express from 'express';
+import express, { application } from 'express';
 import dotenv from 'dotenv';
 import db from './database/configdb.js';
 import userRoute from './routes/user.route.js';
 import exempleRoute from './routes/exemple.route.js';
-
+import habitRoutes from './routes/habits.route.js';
 
 dotenv.config();
 db.connect();
@@ -15,6 +15,8 @@ app.use(express.json());
 
 app.use("/users", userRoute);
 app.use("/secureExempleRoute", exempleRoute);
+app.use('/habits', habitRoutes);
+
 
 app.get('/', (req, res) => {
     res.send({message: 'Hello everyone!'});
@@ -24,3 +26,5 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {console.log(`Server is running on port http://localhost:${PORT}/`);});
+
+export default app;
