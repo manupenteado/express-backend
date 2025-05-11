@@ -1,8 +1,9 @@
-API_URL="http://localhost:3000/habits/6821050b07ad0aeaf14e065b"
-JWT_TOKEN="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MjBmMTc5NzQ5NmMyMDkzYjYwOTQzZCIsImlhdCI6MTc0Njk5NDQxNSwiZXhwIjoxNzQ2OTk4MDE1fQ.Zn4l_FvGF4TisIbfI4JY5D5OBWiq_c7rNnoDHeuQif8"
+source /workspaces/express-backend/.env
+
+API_URL="https://express-backend-manupenteado.vercel.app/habits/$ID_ITEM"
 curl -X PATCH "$API_URL" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $JWT_TOKEN" \
+  -H "Authorization: Bearer $TOKEN" \
   -d '{
     "description": "Atualização parcial",
     "daysOfWeek": ["ter", "qui"]
