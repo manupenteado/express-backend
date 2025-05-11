@@ -1,4 +1,3 @@
-// models/Habit.js
 import mongoose from 'mongoose';
 
 const habitSchema = new mongoose.Schema({
