@@ -1,2 +1,4 @@
-curl -X GET "http://localhost:3000/habits" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MjBmMTc5NzQ5NmMyMDkzYjYwOTQzZCIsImlhdCI6MTc0Njk5NDQxNSwiZXhwIjoxNzQ2OTk4MDE1fQ.Zn4l_FvGF4TisIbfI4JY5D5OBWiq_c7rNnoDHeuQif8"
+source /workspaces/express-backend/.env
+
+curl -X GET "https://express-backend-manupenteado.vercel.app/habits" \
+  -H "Authorization: Bearer $TOKEN"

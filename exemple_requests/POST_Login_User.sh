@@ -1,4 +1,4 @@
 curl --request POST \
---url https://express-backend-manupenteado.vercel.app/login \
+--url https://express-backend-manupenteado.vercel.app/users/login \
 --header "Content-Type: application/json" \
---data '{"name": "manu", "password": "12345678", "email":"penteadoemanuele@gmail.com"}'
+--data '{"email":"ema@gmail.com", "password": "12345678"}'
